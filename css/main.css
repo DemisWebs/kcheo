@@ -122,8 +122,8 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #212121;
-	color: #FAFAFA;
+	background: #FAFAFA;
+	color: #121212;
 	min-height: 100px;
 	position: fixed;
 	width: 100%;
@@ -131,8 +131,7 @@ header{
 	box-shadow: 1px 1px 7px rgba(0, 0, 0, .3);}
 
 .header-sexymar{
-	background: rgba(10, 169,165, 1);
-}
+	background: rgba(10, 169,165, 1);}
 
 #logo img{
 	width: 120px;
@@ -140,8 +139,7 @@ header{
 
 #logo span, #logo2 span{
 	font-family: Arial;
-	font-size: 20px
-}
+	font-size: 20px}
 
 #logo-s img{
 	width: 120px;
@@ -156,9 +154,12 @@ header{
 	display: none;}
 
 header a{
-	color: #BFBFBF;
+	color: #121212;
 	text-decoration: none;
 	transition: .3s;}
+
+.header-sexymar{
+	color: #FAFAFA;}
 
 header a:active{
 	transform: translateY(3px);}
@@ -174,8 +175,12 @@ nav ul{
 nav ul a{
 	padding: 10px;
 	border-radius: 6px;
-	color: #EFEFEF;
+	color: #121212;
+	margin: 4px;
 	transition: .2s;}
+
+nav .ul-s a{
+	color: #FAFAFA;}
 
 nav ul #about:hover{
 	box-shadow: 0px 0px 7px rgba(255, 255, 255, .5);
@@ -202,7 +207,10 @@ nav ul li:active{
 	transform: translateY(3px);}
 
 #checkbtn, #check{
-	display: none;}
+	display: none;
+	width: 24px;
+	text-align: center;
+	cursor: pointer;}
 
 @media (max-width: 768px){
 	
@@ -262,7 +270,7 @@ nav ul li:active{
 	padding: 14px;
 	cursor: pointer;
 	border-radius: 16px;
-	background: rgba(255, 255, 255, .1);
+	background: rgba(0, 0, 0, .1);
 	transition: .2s;}
 
 .search i span{
@@ -273,7 +281,7 @@ nav ul li:active{
 	padding: 14px;
 	cursor: pointer;
 	border-radius: 16px;
-	background: rgba(255, 255, 255, .1);
+	background: rgba(0, 0, 0, .1);
 	transition: .2s;
 	margin-left: 10px;
 	text-align: center;}
@@ -397,19 +405,19 @@ nav ul li:active{
 	border-radius: 16px;}
 
 #section1{
-	background: linear-gradient(90deg, rgba(0,0,0, .2) 47%, rgba(0,0,0, .2) 100%), url(../img/portada.png);
+	background: linear-gradient(90deg, rgba(0,0,0, .1) 47%, rgba(0,0,0, .1) 100%), url(../img/portada.png);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;}
 
 #section2{
-	background: linear-gradient(90deg, rgba(0,0,0, .2) 47%, rgba(0,0,0, .2) 100%), url(../img/portada.png);
+	background: linear-gradient(90deg, rgba(0,0,0, .1) 47%, rgba(0,0,0, .1) 100%), url(../img/portada.png);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;}
 
 #section3{
-	background: linear-gradient(90deg, rgba(0,0,0, .2) 47%, rgba(0,0,0, .2) 100%), url(../img/portada.png);
+	background: linear-gradient(90deg, rgba(0,0,0, .1) 47%, rgba(0,0,0, .1) 100%), url(../img/portada.png);
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;}
@@ -436,9 +444,12 @@ nav ul li:active{
 	background-position: center;}		
 
 .ctn-slider h1, .ctn-slider h2{
-	color: #fff;
+	color: #121212;
 	font-weight: 300;
-	font-size: 36px;}	
+	font-size: 36px;}
+
+.ctn-slider-s h1, .ctn-slider-s h2{
+	color: #FAFAFA;}
 
 
 .ctn-slider-order h1, .ctn-slider-order h2{
