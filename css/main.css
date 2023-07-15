@@ -17,7 +17,7 @@
 	scroll-behavior: smooth;}
 
 *::selection{
-    background: #4444444; }
+    background: #444444; }
 
 /* width */
 *::-webkit-scrollbar {
@@ -119,9 +119,6 @@
 /*HEADER*/
 
 header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background: #FAFAFA;
 	color: #121212;
 	min-height: 100px;
@@ -129,6 +126,7 @@ header{
 	width: 100%;
 	z-index: 10;
 	box-shadow: 1px 1px 7px rgba(0, 0, 0, .3);}
+
 
 .header-sexymar{
 	background: rgba(10, 169,165, 1);}
@@ -170,10 +168,22 @@ ul, ol{
 nav ul{
 	display: flex;
 	-ms-align-items: center;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;}
+
+.logos{
+	margin-left: 10px; 
+	display: flex;
+	align-items: center;}
+
+nav ul .right{
+	display: flex;
+	margin-right: 20px;
 	align-items: center;}
 
 nav ul a{
-	padding: 10px;
+	/* padding: 10px; */
 	border-radius: 6px;
 	color: #121212;
 	margin: 4px;
@@ -182,26 +192,17 @@ nav ul a{
 nav .ul-s a{
 	color: #FAFAFA;}
 
-nav ul #about:hover{
-	box-shadow: 0px 0px 7px rgba(255, 255, 255, .5);
-	/*border-radius: 16px;*/}
-
 nav ul li{
 	margin: 5px;
-	padding: 10px;
+	/* padding: 10px; */
 	transition: .3s;}
 
-nav ul #pedido{
-	margin: 0;
-	padding: 0px;
-	transition: .3s;}
+nav ul .right li{
+	border-radius: 16px;
+	padding: 10px;}
 
-nav ul #pedido a{
-	padding: 0;}
-
-nav ul #pedido a:hover{
-	box-shadow: none;
-	/*border-radius: 16px;*/}
+nav ul .right li:hover{
+	background: rgba(0, 0, 0, .1);}
 
 nav ul li:active{
 	transform: translateY(3px);}
@@ -213,8 +214,8 @@ nav ul li:active{
 	cursor: pointer;}
 
 @media (max-width: 768px){
-	
-	nav ul li:nth-child(2), nav ul li:nth-child(3){
+
+	.logos{
 		display: none;}
 
 	#logo2 img, #logo2-s img{
@@ -236,23 +237,45 @@ nav ul li:active{
 		position: fixed;
 		top: 85px;
 		/*left: 0;*/
-		right: 200%;
+		right: -200%;
 		width: 100%;
 		height: 100vh;
 		background: #FAFAFA;
 		transition: .3s;}
 	
+	nav ul .right{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 45%;}
+
 	nav ul a{
 		color: rgba(0, 0, 0, .8);}
 
 	nav ul li{
 		display: flex;
-		padding: 20px;
 		justify-content: flex-end;}
 
 	#check:checked ~ ul{
-		right: 55%;
-		transition: .3s;}}
+		right: -55%;
+		transition: .3s;}
+	
+	header{
+		display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+	align-items: center;}
+
+	nav .ul-s a{
+	color: #121212;}
+
+	.search-s i{
+		border: 1px solid #000;
+	color: #000;}
+	
+	.ul-s .right #pedido{
+		border: 1px solid #000;
+	}}
 
 /* SEARCH */
 
@@ -269,26 +292,31 @@ nav ul li:active{
 .search i{
 	padding: 14px;
 	cursor: pointer;
-	border-radius: 16px;
-	background: rgba(0, 0, 0, .1);
+	border: 1px solid #000;
+	border-radius: 1000px;
 	transition: .2s;}
+
+.search-s i{
+	border: 1px solid #fff;}
+
+.search i:hover{
+	background: rgba(0, 0, 0, .1);}
 
 .search i span{
 	padding: 0px 0px 0px 10px;
 	font-weight: 600;}
 
-#icon-pedido{
-	padding: 14px;
+#pedido{
+	padding: 10px;
 	cursor: pointer;
-	border-radius: 16px;
-	background: rgba(0, 0, 0, .1);
+	border-radius: 26px;
+	border: 1px solid #000;
 	transition: .2s;
 	margin-left: 10px;
 	text-align: center;}
- 
-#icon-pedido span{
-	font-weight: 600;
-	padding-left: 10px;}
+
+.ul-s .right #pedido{
+	border: 1px solid #fff;}
 
 .search i:active{
 	transform: translateY(3px);}
@@ -342,6 +370,15 @@ nav ul li:active{
 	background: rgba(0, 0, 0, .5);
 	display: none;
 	z-index: 8;}
+
+@media (max-width: 768px){
+	.search-s i{
+		border: 1px solid #000;
+	color: #000;}
+	
+	.ul-s .right #pedido{
+		border: 1px solid #000;}
+}
 
 /*SLIDER*/	
 
